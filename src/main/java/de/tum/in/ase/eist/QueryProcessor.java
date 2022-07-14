@@ -64,7 +64,7 @@ public class QueryProcessor {
             }
             int sum = numbers[0] * numbers[1];
             return "" + sum;
-        } else if (query.contains("which city is the Eiffel tower ")) {
+        } else if (query.contains("which city is the Eiffel towe")) {
 
             return "paris";
 
