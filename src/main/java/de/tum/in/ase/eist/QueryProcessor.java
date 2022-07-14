@@ -72,7 +72,9 @@ public class QueryProcessor {
             return "2016";
         } else if (query.contains("what colour is a banan")) {
             return "yellow";
-        } else {
+        }else if(query.contains("who played James Bond in the film Dr N")){
+            return "Sean Connery";
+        } else{
 
 
             return "";
