@@ -49,7 +49,22 @@ public class QueryProcessor {
                 }
             }
             return "" + currentMax;
-        } else {
+        } else if(query.contains("multipl")){
+            String[] strings = query.split(" ");
+            int counter = 0;
+            int[] numbers = new int[2];
+            for (int i = 0; i < strings.length; i++) {
+                try {
+                    double x = Double.parseDouble(strings[i]);
+                    numbers[counter] = (int) x;
+                    counter++;
+                } catch (Exception e) {
+                    continue;
+                }
+            }
+            int sum = numbers[0] * numbers[1];
+            return "" + sum;
+        } else{
             return "";
         }//hello
     }
