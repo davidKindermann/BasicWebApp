@@ -16,17 +16,17 @@ public class QueryProcessor {
         } else if (query.contains("plus")) {
             String[] strings = query.split(" ");
             int counter = 0;
-            Double[] numbers = new Double[2];
+            int[] numbers = new int[2];
             for (int i = 0; i < strings.length; i++) {
                 try {
                     double x = Double.parseDouble(strings[i]);
-                    numbers[counter] = x;
+                    numbers[counter] = (int) x;
                     counter++;
                 } catch (Exception e) {
                     continue;
                 }
             }
-            double sum = numbers[0] + numbers[1];
+            int sum = numbers[0] + numbers[1];
             return "" + sum;
         }// TODO extend the programm here
         else {
