@@ -49,7 +49,7 @@ public class QueryProcessor {
                 }
             }
             return "" + currentMax;
-        } else if(query.contains("multipl")){
+        } else if (query.contains("multipl")) {
             String[] strings = query.split(" ");
             int counter = 0;
             int[] numbers = new int[2];
@@ -64,7 +64,12 @@ public class QueryProcessor {
             }
             int sum = numbers[0] * numbers[1];
             return "" + sum;
-        } else{
+        } else if (query.contains("which city is the Eiffel tower ")) {
+
+            return "paris";
+
+        } else {
+
             return "";
         }//hello
     }
