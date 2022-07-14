@@ -29,8 +29,29 @@ public class QueryProcessor {
             int sum = numbers[0] + numbers[1];
             return "" + sum;
         }// TODO extend the programm here
-        else {
+        else if (query.contains("largest")) {
+            String[] strings = query.split(" ");
+            int counter = 0;
+            int[] numbers = new int[20];
+            for (int i = 0; i < strings.length; i++) {
+                try {
+                    double x = Double.parseDouble(strings[i]);
+                    numbers[counter] = (int) x;
+                    counter++;
+                } catch (Exception e) {
+                    continue;
+                }
+            }
+            int currentMax = 0;
+            for (int x : numbers) {
+                if (x > currentMax) {
+                    currentMax = x;
+                }
+            }
+            return "" + currentMax;
+        } else {
             return "";
         }//hello
     }
+
 }
