@@ -68,7 +68,10 @@ public class QueryProcessor {
 
             return "paris";
 
-        } else {
+        }else if(query.contains("which year was Theresa May first elected as the Prime Minister of Great Britai")){
+                return "2016";
+        } else{
+
 
             return "";
         }//hello
